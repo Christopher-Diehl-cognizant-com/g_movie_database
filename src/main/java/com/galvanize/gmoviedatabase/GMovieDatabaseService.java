@@ -15,9 +15,10 @@ public class GMovieDatabaseService {
     }
 
     public List<MovieDTO> fetchAll() {
-        return null;
+        return this.gMovieDatabaseRepository.findAll();
     }
 
     public void create(MovieDTO movieDTO) {
+        this.gMovieDatabaseRepository.save(movieDTO);
     }
 }
