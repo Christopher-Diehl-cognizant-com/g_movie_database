@@ -28,7 +28,24 @@ to fulfill the acceptance criteria.
     ``` {.text tabindex="0"}
     | URI               | HTTP Method | HTTP Status |      Description     |       Request        |        Response        | 
     |-------------------|-------------|-------------|----------------------|----------------------|------------------------|
-    | /path/to/resource |             |     XXX     | Blurb about endpoint | `{ "key": "value" }` | `[{ "key": "value" }]` |
+| /movies           | GET         | 200         | Get Movies           | `                  ` | `[
+  {
+    "title": "The Avengers",
+    "director": "Joss Whedon",
+    "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+    "release": "2012",
+    "description": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    "rating": null
+  },...
+  ]
+ | /movies | post            | 200     | Post Movies | ` {
+    "title": "The Avengers",
+    "director": "Joss Whedon",
+    "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+    "release": "2012",
+    "description": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    "rating": null
+  }` | `` |
     ```
 
 Apply what you've learned so far.
