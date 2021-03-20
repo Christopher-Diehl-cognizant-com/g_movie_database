@@ -33,7 +33,7 @@ public class VisitorServiceTest {
         Mockito.when(this.visitorRepository.findAll()).thenReturn(
                 List.of(
                         visitorDTO,
-                        new VisitorDTO("Visitor1")
+                        new VisitorDTO("Visitor2")
                 )
         );
 

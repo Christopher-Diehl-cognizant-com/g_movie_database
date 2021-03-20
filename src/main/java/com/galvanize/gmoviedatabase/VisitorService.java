@@ -15,7 +15,7 @@ public class VisitorService {
         this.visitorRepository = visitorRepository;
     }
 
-    public List<VisitorDTO> fetchAll() {return null;}
+    public List<VisitorDTO> fetchAll() {return this.visitorRepository.findAll();}
 
-    public void create(VisitorDTO visitorDTO){}
+    public void create(VisitorDTO visitorDTO){this.visitorRepository.save(visitorDTO);}
 }
