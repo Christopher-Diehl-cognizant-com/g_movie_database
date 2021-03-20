@@ -11,16 +11,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/movies")
 public class GMovieDatabaseController {
-    List<Movie> movies = new ArrayList<>();
+    List<MovieDTO> movies = new ArrayList<>();
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Movie> getMovies(){
+    public List<MovieDTO> getMovies(){
         return this.movies;
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public void postMovies(@RequestBody Movie movie){
+    public void postMovies(@RequestBody MovieDTO movie){
         this.movies.add(movie);
     }
 

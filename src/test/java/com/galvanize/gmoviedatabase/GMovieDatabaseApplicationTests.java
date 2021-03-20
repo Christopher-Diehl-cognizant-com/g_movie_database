@@ -32,8 +32,6 @@ class GMovieDatabaseApplicationTests {
 	@Test
 	@DirtiesContext
 	public void newMovieReleasedTest() throws Exception{
-
-
 		this.mockMvc.perform(MockMvcRequestBuilders.get("/movies")
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -41,8 +39,8 @@ class GMovieDatabaseApplicationTests {
 
 		this.mockMvc.perform(MockMvcRequestBuilders.post("/movies")
 			.contentType(MediaType.APPLICATION_JSON)
-			.content(this.objectMapper.writeValueAsString(new Movie("The Avengers"))))
-			.andExpect(MockMvcResultMatchers.status().isCreated());
+				.content(this.objectMapper.writeValueAsString(new MovieDTO("The Avengers"))))
+				.andExpect(MockMvcResultMatchers.status().isCreated());
 
 		this.mockMvc.perform(MockMvcRequestBuilders.get("/movies")
 				.contentType(MediaType.APPLICATION_JSON))
